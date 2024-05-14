@@ -16,7 +16,7 @@ public class EmpresaCliente {
 
     public int montoTotalSalarialEmpresa(){
         return this.empleados.stream()
-                .mapToInt(empleado -> empleado.calcularMontoSalarialTotal())
+                .mapToInt(empleado -> empleado.montoSalarial())
                 .sum();
     }
 }

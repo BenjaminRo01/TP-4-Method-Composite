@@ -6,7 +6,7 @@ public class EmpleadoRegular implements Empleado{
         this.salario = salario;
     }
     @Override
-    public int calcularMontoSalarialTotal() {
+    public int montoSalarial() {
         return this.salario;
     }
 }

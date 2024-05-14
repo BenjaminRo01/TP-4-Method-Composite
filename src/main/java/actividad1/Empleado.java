@@ -1,5 +1,5 @@
 package actividad1;
 
 interface Empleado {
-    int calcularMontoSalarialTotal();
+    int montoSalarial();
 }

@@ -1,17 +1,18 @@
 package actividad1;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class EmpleadoNoRegular implements Empleado{
+    private int salario;
     private List<Empleado> empleadosACargo;
-    public EmpleadoNoRegular(List<Empleado> empleados) {
+    public EmpleadoNoRegular(int salario, List<Empleado> empleados) {
+        this.salario = salario;
         this.empleadosACargo = empleados;
     }
     @Override
-    public int calcularMontoSalarialTotal() {
-        return this.empleadosACargo.stream()
-                .mapToInt(empleado -> empleado.calcularMontoSalarialTotal())
+    public int montoSalarial() {
+        return this.salario + this.empleadosACargo.stream()
+                .mapToInt(empleado -> empleado.montoSalarial())
                 .sum();
     }
 }
