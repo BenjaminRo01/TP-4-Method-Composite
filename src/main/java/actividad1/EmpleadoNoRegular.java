@@ -5,11 +5,9 @@ import java.util.List;
 
 public class EmpleadoNoRegular implements Empleado{
     private List<Empleado> empleadosACargo;
-
-    public EmpleadoNoRegular() {
-        this.empleadosACargo = new ArrayList<Empleado>();
+    public EmpleadoNoRegular(List<Empleado> empleados) {
+        this.empleadosACargo = empleados;
     }
-
     @Override
     public int calcularMontoSalarialTotal() {
         return this.empleadosACargo.stream()

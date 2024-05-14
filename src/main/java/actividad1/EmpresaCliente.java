@@ -10,7 +10,11 @@ public class EmpresaCliente {
         this.empleados = new ArrayList<Empleado>();
     }
 
-    private int montoTotalSalarialEmpresa(){
+    public void agregarEmpleado(Empleado empleado){
+        this.empleados.add(empleado);
+    }
+
+    public int montoTotalSalarialEmpresa(){
         return this.empleados.stream()
                 .mapToInt(empleado -> empleado.calcularMontoSalarialTotal())
                 .sum();
